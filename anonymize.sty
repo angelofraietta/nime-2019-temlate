@@ -41,7 +41,7 @@
 \if@anonymize
 
 \newcommand{\anonybib}[1]{\cite{#1-hidden}}
-
+\newcommand{\anoncite}[1]{#1-hidden}
 
 \newcommand{\highlight@DoHighlight}{
 	\fill [outer sep = -15pt, inner sep = 0pt, color=black]
@@ -91,6 +91,7 @@
 \else
 \newcommand{\anonymize}[1]{#1}
 \newcommand{\anonybib}[1]{\cite{#1}}
+\newcommand{\anoncite}[1]{#1}
 \fi
 \makeatother
 

@@ -16,8 +16,8 @@
 
 
 % Uncomment only one of the ones below
-\usepackage{anonymize} %                   Uncomment this line to publish
-%\usepackage[blind]{anonymize} %      Uncomment this line for blind review
+%\usepackage{anonymize} %                   Uncomment this line to publish
+\usepackage[blind]{anonymize} %      Uncomment this line for blind review
 
 
 \begin{document}
@@ -471,8 +471,9 @@ A convenient flag has been provided that will allow you to easily mask any text 
 
 To mask text that will identify you, place the text you want to hide inside the \textbackslash anonymize function. If you have enabled the blind review feature, \anonymize{you will Change back to the non-blind mode when you are ready to publish}. 
 
-Additionally, you will need to make a copy of your personal references, using the second version with a key name adding \texttt{-hidden}. For example, if your reference key is \texttt{myotherpublication}, make a copy called \texttt{myotherpublication-hidden} that has text displayed how you would like it displayed in blind review mode. 
-You will note that \anonybib{mypublication} and \anonybib{myotherpublication} were written by me, so in blind mode, the identifying pats will be suppressed.
+Additionally, you will need to make a copy of your personal references, using the second version with a key name adding \texttt{-hidden}. For example, if your reference key is \texttt{myotherpublication}, make a copy called \texttt{myotherpublication-hidden} that has text displayed how you would like it displayed in blind review mode.  Wrap your reference name with the \textit{anoncite} function. For example, to make \texttt{{\char'134}cite\{mypublication\}} anonymous in the blind version, use the following instead.
+\texttt{{\char'134}cite\{{\char'134}anoncite\{mypublication\}\}}.
+You will note that \cite{\anoncite{mypublication}}) and \cite{\anoncite{myotherpublication}} were written by me, so in blind mode, the identifying pats will be suppressed.
 
 \subsection{Links}
 
