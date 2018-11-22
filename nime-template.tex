@@ -1,5 +1,6 @@
 % Template for NIME 2019
-%
+% 
+% Modified by Angelo Fraietta 22 November 2018
 % Modified by Rodrigo Schramm on 22 September 2018
 % Modified by Luke Dahl on 17 October 2-17
 % Modified by Cumhur Erkut on <2016-10-11 Tue>
@@ -11,8 +12,13 @@
 % Based on "sig-alternate.tex" V1.9 April 2009
 % This file should be compiled with "nime-alternate.cls"
 
+\documentclass{nime-alternate} % Uncomment when publishing final version
 
-\documentclass{nime-alternate}
+
+% Uncomment only one of the ones below
+%\usepackage{anonymize} %                   Uncomment this line to publish
+\usepackage[blind]{anonymize} %      Uncomment this line for blind review
+
 
 \begin{document}
 %
@@ -20,8 +26,6 @@
 %\conferenceinfo{NIME'17,}{May 15-19, 2017, Aalborg University Copenhagen, Denmark.}
 %\conferenceinfo{NIME'18,}{June 3-6, 2018, Blacksburg, Virginia, USA.}
 \conferenceinfo{NIME'19,}{June 3-6, 2019, Federal University of Rio Grande do Sul, ~~~~~~  Porto Alegre,  Brazil.}
-
-
 \title{NIME Proceedings Template for LaTeX}
 
 %
@@ -36,7 +40,7 @@
 % the number of 'columns' to three.
 %
 % Because of the available 'opening page real-estate'
-% we ask you to refrain from putting more than six authors
+\label{key}% we ask you to refrain from putting more than six authors
 % (two rows with three columns) beneath the article title.
 % More than six makes the first-page appear very cluttered indeed.
 %
@@ -66,53 +70,53 @@
 %
 % 1st. author
 \alignauthor
-Ben Trovato\titlenote{Dr.~Trovato insisted his name be first.}\\
-       \affaddr{Institute for Clarity in Documentation}\\
-       \affaddr{1932 Wallamaloo Lane}\\
-       \affaddr{Wallamaloo, New Zealand}\\
-       \email{trovato@corporation.com}
+\anonymize{Ben Trovato}\titlenote{\anonymize{Dr.~Trovato insisted his name be first.}}\\
+       \affaddr{\anonymize{Institute for Clarity in Documentation}}\\
+       \affaddr{\anonymize{1932 Wallamaloo Lane}}\\
+       \affaddr{\anonymize{Wallamaloo, New Zealand}}\\
+       \email{\anonymize{trovato@corporation.com}}
 % 2nd. author
 \alignauthor
-G.K.M. Tobin\titlenote{The secretary disavows
-any knowledge of this author's actions.}\\
-       \affaddr{Institute for Clarity in Documentation}\\
-       \affaddr{P.O. Box 1212}\\
-       \affaddr{Dublin, Ohio 43017-6221}\\
-       \email{webmaster@marysville-ohio.com}
+\anonymize{G.K.M. Tobin}\titlenote{\anonymize{The secretary disavows
+any knowledge of this author's actions.}}\\
+       \affaddr{\anonymize{Institute for Clarity in Documentation}}\\
+       \affaddr{\anonymize{P.O. Box 1212}}\\
+       \affaddr{\anonymize{Dublin, Ohio 43017-6221}}\\
+       \email{\anonymize{webmaster@marysville-ohio.com}}
 % 3rd. author
-\alignauthor Lars Th{\o}rv{\"a}ld\titlenote{This author is the
+\alignauthor \anonymize{Lars Th{\o}rv{\"a}ld}\titlenote{This author is the
 one who did all the really hard work.}\\
-       \affaddr{The Th{\o}rv{\"a}ld Group}\\
-       \affaddr{1 Th{\o}rv{\"a}ld Circle}\\
-       \affaddr{Hekla, Iceland}\\
-       \email{larst@affiliation.org}
+       \affaddr{\anonymize{The Th{\o}rv{\"a}ld Group}}\\
+       \affaddr{\anonymize{1 Th{\o}rv{\"a}ld Circle}}\\
+       \affaddr{\anonymize{Hekla, Iceland}}\\
+       \email{l\anonymize{arst@affiliation.org}}
 \and  % use '\and' if you need 'another row' of author names
 % 4th. author
-\alignauthor Lawrence P. Leipuner\\
-       \affaddr{Brookhaven Laboratories}\\
-       \affaddr{Brookhaven National Lab}\\
-       \affaddr{P.O. Box 5000}\\
-       \email{lleipuner@researchlabs.org}
+\alignauthor \anonymize{Lawrence P. Leipuner}\\
+       \affaddr{\anonymize{Brookhaven Laboratories}}\\
+       \affaddr{\anonymize{Brookhaven National Lab}}\\
+       \affaddr{\anonymize{P.O. Box 5000}}\\
+       \email{\anonymize{lleipuner@researchlabs.org}}
 % 5th. author
-\alignauthor Sean Fogarty\\
-       \affaddr{NASA Ames Research Center}\\
-       \affaddr{Moffett Field}\\
-       \affaddr{California 94035}\\
-       \email{fogartys@amesres.org}
+\alignauthor \anonymize{Sean Fogarty}\\
+       \affaddr{\anonymize{NASA Ames Research Center}}\\
+       \affaddr{\anonymize{Moffett Field}}\\
+       \affaddr{\anonymize{California 94035}}\\
+       \email{\anonymize{fogartys@amesres.org}}
 % 6th. author
-\alignauthor Anon Nymous\\
-       \affaddr{Redacted }\\
-       \affaddr{8600 Datapoint Drive}\\
-       \affaddr{San Antonio, Texas 78229}\\
-       \email{cpalmer@prl.com}
+\alignauthor \anonymize{Anon Nymous}\\
+       \affaddr{\anonymize{Redacted }}\\
+       \affaddr{\anonymize{8600 Datapoint Drive}}\\
+       \affaddr{\anonymize{San Antonio, Texas 78229}}\\
+       \email{\anonymize{cpalmer@prl.com}}
 }
 % There's nothing stopping you putting the seventh, eighth, etc.
 % author on the opening page (as the 'third row') but we ask,
 % for aesthetic reasons that you place these 'additional authors'
 % in the \additional authors block, viz.
-\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-(K. Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+\additionalauthors{Additional authors: \anonymize{John Smith (The Th{\o}rv{\"a}ld Group,}
+email: {\texttt{\anonymize{jsmith@affiliation.org}}}) and \anonymize{Julius P.~Kumquat 
+(K. Consortium,} email: {\texttt{\anonymize{jpkumquat@consortium.net}}}).}
 \date{30 July 1999}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
@@ -462,6 +466,13 @@ of the citation command, using \texttt{{\char'134}cite}.
 This is what is stipulated in the SIGS style specifications.
 No other citation format is endorsed or supported.
 
+\subsubsection{Blind Review}
+A convenient flag has been provided that will allow you to easily mask any text or reference that could be used to identify you as the author. To enable the feature, comment the line \texttt{\textbackslash usepackage{anonymize} } and uncomment the \texttt{\textbackslash usepackage[blind]{anonymize} } lines near the top of the file. 
+
+To mask text that will identify you, place the text you want to hide inside the \textbackslash anonymize function. If you have enabled the blind review feature, \anonymize{you will Change back to the non-blind mode when you are ready to publish}. 
+
+Additionally, you will need to make a copy of your personal references, using the second version with a key name adding \texttt{-hidden}. For example, if your reference key is \texttt{myotherpublication}, make a copy called \texttt{myotherpublication-hidden} that has text displayed how you would like it displayed in blind review mode. 
+You will note that \anonybib{mypublication} and \anonybib{myotherpublication} were written by me, so in blind mode, the identifying pats will be suppressed.
 
 \subsection{Links}
 
@@ -494,7 +505,10 @@ and the \textbf{.cls} and \textbf{.tex} files that it describes.
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
 \bibliographystyle{abbrv}
-\bibliography{nime-references}  % sigproc.bib is the name of the Bibliography in this case
+
+	\bibliography{nime-references} 
+
+
 % You must have a proper ".bib" file
 %  and remember to run:
 % latex bibtex latex latex
